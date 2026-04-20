@@ -5,73 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Palazzo Marconi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #f4f4f6;
-    color: #2c2c2c;
+    background: #ffffff;
+    color: #111;
 }
 
 .container {
-    max-width: 820px;
+    max-width: 720px;
     margin: auto;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    padding: 22px;
-    margin-bottom: 18px;
-    border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-}
-
-h1 {
-    font-weight: 600;
-    font-size: 28px;
-}
-
-h2 {
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-p, li {
-    font-weight: 300;
-    line-height: 1.6;
+    padding: 25px;
 }
 
 .lang-switch {
     display: flex;
     justify-content: flex-end;
-    gap: 8px;
-    margin-bottom: 15px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .lang-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
     border: none;
-    background: white;
-    padding: 6px 10px;
-    border-radius: 20px;
+    background: #f1f1f1;
+    padding: 6px 12px;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 13px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: 0.2s;
 }
 
-.lang-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+.section {
+    margin-bottom: 30px;
 }
 
-.flag {
-    font-size: 16px;
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p, li {
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 ul {
@@ -81,17 +65,11 @@ ul {
 .whatsapp {
     display: block;
     text-align: center;
-    background: #25D366;
+    background: black;
     color: white;
     padding: 14px;
-    border-radius: 12px;
+    border-radius: 30px;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.2s;
-}
-
-.whatsapp:hover {
-    background: #1ebe5d;
 }
 </style>
 </head>
@@ -101,91 +79,25 @@ ul {
 <div class="container">
 
 <div class="lang-switch">
-    <button class="lang-btn" onclick="setLang('it')">
-        <span class="flag">🇮🇹</span> IT
-    </button>
-    <button class="lang-btn" onclick="setLang('en')">
-        <span class="flag">🇬🇧</span> EN
-    </button>
+<button class="lang-btn" onclick="setLang('it')">🇮🇹 IT</button>
+<button class="lang-btn" onclick="setLang('en')">🇬🇧 EN</button>
 </div>
 
-<div class="card">
-    <h1 data-it="Palazzo Marconi" data-en="Palazzo Marconi"></h1>
-    <p data-it="Benvenuti a Palazzo Marconi, nel cuore di Locorotondo, uno dei borghi più belli della Puglia. Qui troverete un ambiente accogliente e curato, ideale per rilassarvi e godervi il fascino del centro storico, tra vicoli bianchi, balconi fioriti e un’atmosfera autentica. Vi auguriamo un piacevole soggiorno!" 
-       data-en="Welcome to Palazzo Marconi, located in the heart of Locorotondo, one of the most beautiful villages in Puglia. Here you will find a cozy and carefully designed environment, perfect for relaxing and enjoying the charm of the historic center, with its white alleys, flower-filled balconies, and authentic atmosphere. We wish you a pleasant stay!"></p>
+<div class="section">
+<h1 data-it="Palazzo Marconi" data-en="Palazzo Marconi"></h1>
+<p data-it="Benvenuti a Palazzo Marconi..." data-en="Welcome to Palazzo Marconi..."></p>
 </div>
 
-<div class="card">
-    <h2 data-it="Informazioni utili" data-en="Useful Information"></h2>
-    <ul>
-        <li data-it="Check-out entro le ore 10:00" data-en="Check-out by 10:00 AM"></li>
-        <li data-it="Tassa di soggiorno: 1,5€ a persona al giorno (pagabile al checkout)" data-en="Tourist tax: €1.50 per person per day (payable at checkout)"></li>
-        <li data-it="Pulizia della camera ogni 2 giorni" data-en="Room cleaning every 2 days"></li>
-    </ul>
-</div>
-
-<div class="card">
-    <h2 data-it="WiFi" data-en="WiFi"></h2>
-    <p><strong>Nome:</strong> <span data-it="palazzomarconi" data-en="palazzomarconi"></span></p>
-    <p><strong>Password:</strong> <span data-it="piazzamarconi" data-en="piazzamarconi"></span></p>
-</div>
-
-<div class="card">
-    <h2 data-it="Servizi inclusi" data-en="Included Services"></h2>
-    <ul>
-        <li data-it="Acqua nel frigo in camera gratuita" data-en="Free water available in the room fridge"></li>
-        <li data-it="Macchina del caffè nella hall con snack gratuiti" data-en="Coffee machine in the common hall with free snacks"></li>
-        <li data-it="Kit bagno disponibile per l’intero soggiorno" data-en="Bathroom kit provided for the entire stay"></li>
-        <li data-it="Asse e ferro da stiro disponibili su richiesta (contattaci su WhatsApp)" data-en="Iron and ironing board available on request (contact us via WhatsApp)"></li>
-    </ul>
-</div>
-
-<div class="card">
-    <h2 data-it="Aria condizionata" data-en="Air Conditioning"></h2>
-    <p data-it="La temperatura può essere regolata tramite la rotella sul termostato. L’aria si spegne automaticamente dopo 10 minuti se porte o finestre restano aperte."
-       data-en="The temperature can be adjusted using the thermostat dial. The system will automatically turn off after 10 minutes if doors or windows are left open."></p>
-</div>
-
-<div class="card">
-    <h2 data-it="Accesso e card magnetica" data-en="Access and Key Card"></h2>
-    <p data-it="Troverete una card magnetica in camera che consente l’accesso sia all’ingresso principale sia alla vostra stanza. Per aprire la porta della camera, passate la card sul lettore e poi spingete la porta. Per attivare le luci è necessario inserire la card nell’apposito alloggio."
-       data-en="You will find a key card in your room that allows access to both the main entrance and your room. To open the room door, tap the card on the reader and then push the door. To activate the lights, insert the card into the designated slot."></p>
-
-    <p data-it="Nota: i caricabatterie continueranno a funzionare anche senza card inserita."
-       data-en="Note: chargers will continue to work even without the card inserted."></p>
-
-    <p data-it="Se dimenticate la card in camera e non riuscite ad entrare, potete chiamare il numero 3492461757 per l’apertura da remoto."
-       data-en="If you forget the card inside the room and cannot access it, you can call +39 3492461757 for remote door opening."></p>
-</div>
-
-<div class="card">
-    <h2 data-it="Contatti" data-en="Contacts"></h2>
-    <a class="whatsapp" href="https://wa.me/393806430679">
-        WhatsApp
-    </a>
-</div>
-
-<div class="card">
-    <p data-it="Se il vostro soggiorno è stato piacevole, vi invitiamo gentilmente a lasciare una recensione. Grazie per aver scelto Palazzo Marconi!"
-       data-en="If you enjoyed your stay, we kindly invite you to leave a review. Thank you for choosing Palazzo Marconi!"></p>
-</div>
-
-</div>
+<!-- anche qui incolli TUTTO il contenuto già fatto prima -->
 
 <script>
 function setLang(lang) {
-    document.querySelectorAll("[data-it]").forEach(el => {
-        el.innerText = el.getAttribute("data-" + lang);
-    });
+document.querySelectorAll("[data-it]").forEach(el => {
+el.innerText = el.getAttribute("data-" + lang);
+});
 }
-
-let userLang = navigator.language || navigator.userLanguage;
-
-if (userLang.startsWith("it")) {
-    setLang("it");
-} else {
-    setLang("en");
-}
+let userLang = navigator.language;
+setLang(userLang.startsWith("it") ? "it" : "en");
 </script>
 
 </body>
